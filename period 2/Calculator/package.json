@@ -1,0 +1,15 @@
+{
+  "name": "calculator",
+  "version": "0.0.0",
+  "description": "",
+  "main": "moduleUser.js",
+  "scripts": {
+    "test": "mocha 'moduleDemo/test/calculator.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.2.0"
+  }
+}
