@@ -55,17 +55,10 @@ async function makeSecureRandomList(list){
         "randoms": []
         }
 
-
     let randomPromises = []
     for (let i of list){
         randomPromises.push(makeSecureRandom(i))
     }
-
-
-    // Promise.all(randomPromises)
-    // .then(function(response){
-    //     console.log(response)
-    // })
 
     await Promise.all(randomPromises)
     .then(function(response){
@@ -73,21 +66,9 @@ async function makeSecureRandomList(list){
         jsonObject.randoms = response
     })
     
-    // Promise.all(randomPromises)
-    // .then(function(response){
-        
-    //     for (let i of response){
-    //         jsonObject.randoms.push(i)
-    //     }
-    // })
+
 
     return jsonObject
 }
-
-// makeSecureRandomList([48,40,32,24,16,8]).then(value => {
-//     console.log(value)
-// })
-
-
 
 module.exports = makeSecureRandomList
